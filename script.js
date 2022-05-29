@@ -73,8 +73,8 @@ function addItemToCart (price, imageSrc) {
       `
   productRow.innerHTML = cartRowItems;
   productRows.append(productRow);
-  productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem)
-  productRow.getElementsByClassName('product-quantity')[0].addEventListener('change', changeQuantity)
+  productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem);
+//   productRow.getElementsByClassName('product-quantity')[0].addEventListener('change', changeQuantity);
   updateCartPrice()
 }
 // end of add products to cart
