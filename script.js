@@ -55,9 +55,6 @@ function countwords(){
     
 
 
-
-
-
     if(textwords.length === 0 || typeof textwords !== 'string'){
         console.log("Enter the valid string");
        wordcount.innerHTML="  Enter a valid string";
@@ -69,6 +66,37 @@ function countwords(){
 }
 
 
+
+//task 4 print an interger with commas of thousands saparators
+
+const numinput = document.getElementById("numinput");
+const separatorbtn = document.getElementById("separatorbtn");
+const sepatateWithcomma = document.getElementById("sepatateWithcomma");
+
+separatorbtn.addEventListener("click", separatenum);
+
+function separatenum(){
+    let num = numinput.value;
+
+    if(num === ''){
+        console.log("null");
+        sepatateWithcomma.innerHTML = "Enter the number";
+        
+    }else{
+
+    
+    console.log(num);
+
+    let divide = num.toString().split(".");
+    divide[0] = divide[0].replace(/\B(?=(\d{3})+(?!\d))/g,",");
+    let result = divide.join(".");
+    console.log(result);
+    sepatateWithcomma.innerHTML = result;
+}
+    
+    // console.log(typeof numinput);
+    // console.log(numinput.value);
+}
 
 
 
