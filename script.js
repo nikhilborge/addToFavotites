@@ -61,11 +61,12 @@ function addItemToCart (price, imageSrc) {
     }
   }
   
+//   <input class="product-quantity" type="number" value="1">
   var cartRowItems = `
   <div class="product-row">
         <img class="cart-image" src="${imageSrc}" alt="">
         <span class ="cart-price">${price}</span>
-        <input class="product-quantity" type="number" value="1">
+        
         <button class="remove-btn">Remove</button>
         </div>
         
